@@ -23,7 +23,7 @@ class AssetController
 
     public function icon()
     {
-        header('Content-Type: imgage/svg');
+        header('Content-Type: image/svg+xml');
         return file_get_contents(__DIR__."/../../assets/com.vixalien.sticky.svg");
     }
 
