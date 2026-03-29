@@ -1,4 +1,4 @@
-<div class="column items-center">
+<div class="column-4 items-center">
     <div class="note note-<?= $note->style() ?> column">
         <b><?= $note->title() ?></b>
         <hr style="color: var(--text-light); opacity: .3"/>

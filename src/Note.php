@@ -55,7 +55,7 @@ class Note
 
     public function content(): string
     {
-        return $this->content;
+        return str_replace("\n", "<br />", $this->content);
     }
 
     public function style(): int

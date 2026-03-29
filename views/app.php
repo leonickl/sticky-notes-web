@@ -12,10 +12,11 @@
     <link rel="stylesheet" href="/css/snippets" />
     <link rel="stylesheet" href="/css/components" />
     <link rel="stylesheet" href="/css/button" />
+    <link rel="stylesheet" href="/css/form" />
 </head>
 
 <body>
-    <main>
+    <main class="<?= auth() ? 'simplified' : '' ?>">
         <?= $slot ?>
     </main>
 </body>
