@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6478f8b3b75e6b9750fe48994bb60e7a",
+    "content-hash": "8a8d92811617b7b7ccd5ecdbb0078aee",
     "packages": [
         {
             "name": "leonickl/pxp-core",
-            "version": "v2.2.0",
+            "version": "v2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/leonickl/pxp-core.git",
-                "reference": "b20b6535242ea1d3cbb8bfd9e8ec5292c3e88fa6"
+                "reference": "3b984313ab0153c36237fdc0a09d4f9984bfabf0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/leonickl/pxp-core/zipball/b20b6535242ea1d3cbb8bfd9e8ec5292c3e88fa6",
-                "reference": "b20b6535242ea1d3cbb8bfd9e8ec5292c3e88fa6",
+                "url": "https://api.github.com/repos/leonickl/pxp-core/zipball/3b984313ab0153c36237fdc0a09d4f9984bfabf0",
+                "reference": "3b984313ab0153c36237fdc0a09d4f9984bfabf0",
                 "shasum": ""
             },
             "require": {
@@ -45,9 +45,9 @@
             "description": "Core functionality for leonickl/pxp",
             "support": {
                 "issues": "https://github.com/leonickl/pxp-core/issues",
-                "source": "https://github.com/leonickl/pxp-core/tree/v2.2.0"
+                "source": "https://github.com/leonickl/pxp-core/tree/v2.2.1"
             },
-            "time": "2026-03-29T12:37:47+00:00"
+            "time": "2026-03-29T12:54:54+00:00"
         }
     ],
     "packages-dev": [

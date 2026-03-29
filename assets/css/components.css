@@ -1,0 +1,22 @@
+.note {
+    background-color: var(--note-bg);
+    color: var(--note-fg);
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: var(--note-shadow) 4px 4px 24px;
+    width: min(400px, 90%);
+}
+
+.note-1 {
+    --note-bg: #fff6cb;
+    --note-fg: black;
+    --note-shadow: #959da533;
+}
+
+@media (prefers-color-scheme: dark) {
+    .note-1 {
+        --note-bg: #7c7348;
+        --note-fg: #white;
+        --note-shadow: #6e757c33;
+    }
+}

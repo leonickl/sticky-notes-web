@@ -1,6 +1,10 @@
 <?php
 
-use App\Controllers\ExampleController;
-use PXP\Core\Lib\Route;
+use App\Controllers\NoteController;
+use PXP\Router\Route;
+use App\Controllers\AssetController;
 
-Route::get('/')->do(ExampleController::class, 'index');
+Route::get('/notes')->do(NoteController::class, 'index');
+Route::get('/notes/{uid}')->do(NoteController::class, 'show');
+
+Route::get('/css/{file}')->do(AssetController::class, 'css');

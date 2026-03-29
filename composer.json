@@ -1,6 +1,6 @@
 {
-    "name": "leonickl/pxp",
-    "description": "A PHP-Framework",
+    "name": "leonickl/sticky-notes-web",
+    "description": "web client for viewing sticky notes created by com.vixalien.sticky",
     "type": "project",
     "require": {
         "ext-pdo": "*",
