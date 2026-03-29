@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="/css/components" />
     <link rel="stylesheet" href="/css/button" />
     <link rel="stylesheet" href="/css/form" />
+    <link rel="stylesheet" href="/css/media" />
 </head>
 
 <body>

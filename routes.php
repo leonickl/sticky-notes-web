@@ -8,6 +8,10 @@ use PXP\Http\Middleware\InteractiveAuth;
 use PXP\Router\Route;
 
 Route::get('/')
+    ->do(NoteController::class, 'index')
+    ->middleware(InteractiveAuth::class);
+
+Route::get('/home')
     ->do(MainController::class, 'index')
     ->middleware(InteractiveAuth::class);
 

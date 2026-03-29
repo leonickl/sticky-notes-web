@@ -8,5 +8,5 @@
         </div>
     <?php endforeach ?>
 
-    <a href="/" class="btn w-10 text-center">Back</a>
+    <a href="/home" class="btn w-10 text-center">Back</a>
 </div>
