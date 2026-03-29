@@ -3,6 +3,6 @@
 return [
     'title' => 'Sticky Notes',
     'domain' => 'localhost',
-    'port' => 8085,
+    'port' => env('PORT', 8096),
     'note.dir' => env('NOTE_DIR'),
 ];
