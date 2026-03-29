@@ -22,6 +22,18 @@ Route::get('/notes/{uid}')
 Route::get('/css/{file}')
     ->do(AssetController::class, 'css');
 
+Route::get('/manifest.json')
+    ->do(AssetController::class, 'manifest');
+
+Route::get('/icon.svg')
+    ->do(AssetController::class, 'icon');
+
+Route::get('/app.js')
+    ->do(AssetController::class, 'appJs');
+
+Route::get('/sw.js')
+    ->do(AssetController::class, 'sw');
+
 Route::get('/login')->do(LoginController::class, 'form');
 Route::post('/login')->do(LoginController::class, 'login');
 

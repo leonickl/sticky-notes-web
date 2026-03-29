@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title><?= config('title') ?></title>
+
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="icon" href="/icon.ico" sizes="any">
+
+    <link rel="manifest" href="/manifest.json" />
     
     <link rel="stylesheet" href="/css/base" />
     <link rel="stylesheet" href="/css/colors" />
