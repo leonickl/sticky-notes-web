@@ -2,8 +2,8 @@
 
 namespace App\Controllers;
 
-use PXP\Http\Controllers\Controller;
 use App\Note;
+use PXP\Http\Controllers\Controller;
 
 class NoteController extends Controller
 {

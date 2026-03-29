@@ -18,8 +18,6 @@ class Note
     {
         $object = json_decode($json);
 
-        // dump($json, $object);
-
         return new Note(
             uuid: $object->uuid,
             title: $object->title,
@@ -34,8 +32,8 @@ class Note
         $dir = config('note.dir');
 
         return v(...scandir($dir))
-            ->filter(fn($file) => ! str_starts_with($file, '.'))
-            ->map(fn($file) => Note::fromJSON(file_get_contents("$dir/$file")));
+            ->filter(fn ($file) => ! str_starts_with($file, '.'))
+            ->map(fn ($file) => Note::fromJSON(file_get_contents("$dir/$file")));
     }
 
     public static function find(string $uid): Note
