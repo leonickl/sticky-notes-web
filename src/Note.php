@@ -27,20 +27,36 @@ class Note
         );
     }
 
+    public static function empty(): Note
+    {
+        return new Note(
+            uuid: '---',
+            title: '---',
+            content: '---',
+            style: 1,
+            modified: date('Y-m-d H:i:s', time()),
+        );
+    }
+
     public static function all(): Vector
     {
         $dir = config('note.dir');
 
         return v(...scandir($dir))
             ->filter(fn ($file) => ! str_starts_with($file, '.'))
-            ->map(fn ($file) => Note::fromJSON(file_get_contents("$dir/$file")));
+            ->map(fn ($file) => Note::fromJSON(file_get_contents("$dir/$file")))
+            ->filter();
     }
 
-    public static function find(string $uid): Note
+    public static function find(string $uid): ?Note
     {
         $dir = config('note.dir');
 
-        return Note::fromJSON(file_get_contents("$dir/$uid.json"));
+        try {
+            return Note::fromJSON(file_get_contents("$dir/$uid.json"));
+        } catch (\Throwable) {
+            return null;
+        }
     }
 
     public function uuid(): string
