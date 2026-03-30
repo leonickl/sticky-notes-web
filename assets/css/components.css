@@ -5,18 +5,137 @@
     border-radius: 1rem;
     box-shadow: var(--note-shadow) 4px 4px 24px;
     width: min(400px, 90%);
+    position: relative;
 }
 
-.note-1 {
-    --note-bg: #fff6cb;
+.note.wrapper {
+    background-color: transparent;
+    padding: 0;
+    border-radius: none;
+}
+
+.note a {
+    color: var(--note-fg);
+}
+
+.note .circle {
+    position: absolute;
+    right: 1rem;
+    background-color: var(--note-accent);
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    top: 50%;
+    translate: 0 -50%;
+}
+
+.note .header {
+    background-color: var(--note-accent);
+    padding: .7rem 1rem;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.note .content {
+    background-color: var(--note-bg);
+    padding: 1rem;
+}
+
+.note .footer {
+    background-color: var(--note-accent);
+    padding: .7rem 1rem;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.note {
     --note-fg: black;
     --note-shadow: #959da533;
 }
 
+.note-yellow {
+    --note-bg: #fff6cb;
+    --note-accent: #ffee92;
+}
+
+.note-pink {
+    --note-bg: #ffe3f1;
+    --note-accent: #ffc5e1;
+}
+
+.note-green {
+    --note-bg: #e7f6e4;
+    --note-accent: #d1ebcb;
+}
+
+.note-purple {
+    --note-bg: #f2e5ff;
+    --note-accent: #e2d0f5;
+}
+
+.note-blue {
+    --note-bg: #e7f3ff;
+    --note-accent: #cce7ff;
+}
+
+.note-grey {
+    --note-bg: #edebe9;
+    --note-accent: #dddad8;
+}
+
+.note-black {
+    --note-fg: #f5f5f5;
+    --note-bg: #5e5e5e;
+    --note-accent: #3f3d3c;
+}
+
+.note-white {
+    --note-bg: #fafafb;
+    --note-accent: #FFFFFF;
+}
+
 @media (prefers-color-scheme: dark) {
-    .note-1 {
-        --note-bg: #7c7348;
+    .note {
         --note-fg: #white;
         --note-shadow: #6e757c33;
+    }
+
+    .note-yellow {
+        --note-bg: #7c7348;
+        --note-accent: #7c6b0f;
+    }
+
+    .note-pink {
+        --note-bg: #7c606e;
+        --note-accent: #7c425e;
+    }
+
+    .note-green {
+        --note-bg: #647361;
+        --note-accent: #4e6848;
+    }
+
+    .note-purple {
+        --note-bg: #6f627c;
+        --note-accent: #5f4d72;
+    }
+
+    .note-blue {
+        --note-bg: #64707c;
+        --note-accent: #49647c;
+    }
+
+    .note-grey {
+        --note-bg: #6a6866;
+        --note-accent: #5A5755;
+    }
+
+    .note-black {
+        --note-fg: #f5f5f5;
+        --note-bg: #5e5e5e;
+        --note-accent: #3f3d3c;
+    }
+
+    .note-white {
+        --note-bg: #222226;
+        --note-accent: #2E2E32;
     }
 }

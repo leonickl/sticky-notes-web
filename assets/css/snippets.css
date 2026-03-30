@@ -20,6 +20,12 @@
     gap: 1rem;
 }
 
+.column-0 {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
 .column-4 {
     display: flex;
     flex-direction: column;

@@ -50,7 +50,7 @@ class Note
 
     public function title(): string
     {
-        return $this->title;
+        return $this->title ?: '---';
     }
 
     public function content(): string
@@ -58,9 +58,18 @@ class Note
         return str_replace("\n", "<br />", $this->content);
     }
 
-    public function style(): int
+    public function style(): string
     {
-        return $this->style;
+        return match ($this->style) {
+            1 => 'yellow',
+            2 => 'pink',
+            3 => 'green',
+            4 => 'purple',
+            5 => 'blue',
+            6 => 'grey',
+            7 => 'black',
+            8 => 'white',
+        };
     }
 
     public function modified(): string

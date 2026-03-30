@@ -4,7 +4,10 @@
             <a href="/notes/<?= $note->uuid() ?>">
                 <b><?= $note->title() ?></b>
             </a>
+
             <em><?= $note->modified() ?></em>
+
+            <a href="/notes/<?= $note->uuid() ?>" class="circle"></a>
         </div>
     <?php endforeach ?>
 
