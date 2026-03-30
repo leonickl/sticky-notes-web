@@ -8,6 +8,7 @@ use Sabre\DAV\Client;
 use PXP\Ds\Vector;
 use App\Models\User;
 use PXP\Lib\Auth;
+use Exception;
 
 class Storage
 {
@@ -20,6 +21,15 @@ class Storage
 
     public static function user(User $user): Storage
     {
+        if (! isset(
+            $user->nc_url,
+            $user->nc_user,
+            $user->nc_pass,
+            $user->nc_dir,
+        )) {
+            throw new Exception("User has no connected Nextcloud");
+        }
+
         return new Storage(
             url: $user->nc_url,
             user: $user->nc_user,
