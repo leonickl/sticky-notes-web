@@ -2,7 +2,6 @@
 
 namespace App\Controllers;
 
-use App\Note;
 use PXP\Http\Controllers\Controller;
 
 class MainController extends Controller

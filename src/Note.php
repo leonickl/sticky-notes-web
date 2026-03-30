@@ -61,7 +61,7 @@ class Note
     {
         $dir = config('note.dir');
         // TODO: handle filesystem exception
-        return Note::fromJSON(Storage::current()->read("$uid.json"));
+        return Note::fromJSON(file_get_contents("$dir/$uid.json"));
     }
 
     public function uuid(): string
@@ -76,7 +76,7 @@ class Note
 
     public function content(): string
     {
-        return str_replace("\n", "<br />", $this->content);
+        return str_replace("\n", '<br />', $this->content);
     }
 
     public function style(): string
