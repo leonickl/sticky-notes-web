@@ -4,7 +4,9 @@
     "type": "project",
     "require": {
         "ext-pdo": "*",
-        "leonickl/pxp-core": "^2.2.0"
+        "leonickl/pxp-core": "^2.2.0",
+        "league/flysystem": "^3.33",
+        "league/flysystem-webdav": "^3.31"
     },
     "autoload": {
         "psr-4": {

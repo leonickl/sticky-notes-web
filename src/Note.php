@@ -50,16 +50,18 @@ class Note
     {
         $dir = config('note.dir');
 
-        return v(...scandir($dir))
-            ->filter(fn ($file) => ! str_starts_with($file, '.'))
-            ->map(fn ($file) => Note::fromJSON(file_get_contents("$dir/$file")))
+        // TODO: handle filesystem exception
+        return Storage::current()
+            ->list()
+            ->map(fn ($file) => Note::find(explode('.', $file)[0]))
             ->filter();
     }
 
     public static function find(string $uid): Note
     {
         $dir = config('note.dir');
-        return Note::fromJSON(file_get_contents("$dir/$uid.json"));
+        // TODO: handle filesystem exception
+        return Note::fromJSON(Storage::current()->read("$uid.json"));
     }
 
     public function uuid(): string
