@@ -11,5 +11,5 @@
         </div>
     <?php endforeach ?>
 
-    <a href="/home" class="btn w-10 text-center">Back</a>
+    <a href="/home" class="btn w-10 text-center">Home</a>
 </div>
