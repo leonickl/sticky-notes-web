@@ -14,6 +14,6 @@ class NoteController extends Controller
 
     public function show(string $uid)
     {
-        return view('note', ['note' => Note::find($uid) ?? Note::empty()]);
+        return view('note', ['note' => Note::find($uid)]);
     }
 }

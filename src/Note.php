@@ -14,9 +14,17 @@ class Note
         private string $modified,
     ) {}
 
-    private static function fromJSON(string $json): Note
+    private static function fromJSON(string|false $json): Note
     {
+        if ($json === false) {
+            return Note::empty();
+        }
+
         $object = json_decode($json);
+
+        if ($object === null || $object === false || $object === '') {
+            return Note::empty();
+        }
 
         return new Note(
             uuid: $object->uuid,
@@ -48,15 +56,10 @@ class Note
             ->filter();
     }
 
-    public static function find(string $uid): ?Note
+    public static function find(string $uid): Note
     {
         $dir = config('note.dir');
-
-        try {
-            return Note::fromJSON(file_get_contents("$dir/$uid.json"));
-        } catch (\Throwable) {
-            return null;
-        }
+        return Note::fromJSON(file_get_contents("$dir/$uid.json"));
     }
 
     public function uuid(): string
