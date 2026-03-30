@@ -60,6 +60,7 @@ class Note
     public static function find(string $uid): Note
     {
         $dir = config('note.dir');
+
         // TODO: handle filesystem exception
         return Note::fromJSON(file_get_contents("$dir/$uid.json"));
     }

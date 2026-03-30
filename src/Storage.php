@@ -2,13 +2,13 @@
 
 namespace App;
 
+use App\Models\User;
+use Exception;
 use League\Flysystem\Filesystem;
 use League\Flysystem\WebDAV\WebDAVAdapter;
-use Sabre\DAV\Client;
 use PXP\Ds\Vector;
-use App\Models\User;
 use PXP\Lib\Auth;
-use Exception;
+use Sabre\DAV\Client;
 
 class Storage
 {
@@ -27,7 +27,7 @@ class Storage
             $user->nc_pass,
             $user->nc_dir,
         )) {
-            throw new Exception("User has no connected Nextcloud");
+            throw new Exception('User has no connected Nextcloud');
         }
 
         return new Storage(
@@ -37,7 +37,7 @@ class Storage
             directory: $user->nc_dir,
         );
     }
-    
+
     public static function current(): Storage
     {
         return Storage::user(Auth::user());
