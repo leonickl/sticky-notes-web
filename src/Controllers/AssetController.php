@@ -18,24 +18,28 @@ class AssetController
     public function manifest()
     {
         header('Content-Type: application/json');
-        return file_get_contents(__DIR__."/../../assets/manifest.json");
+
+        return file_get_contents(__DIR__.'/../../assets/manifest.json');
     }
 
     public function icon()
     {
         header('Content-Type: image/svg+xml');
-        return file_get_contents(__DIR__."/../../assets/com.vixalien.sticky.svg");
+
+        return file_get_contents(__DIR__.'/../../assets/com.vixalien.sticky.svg');
     }
 
     public function sw()
     {
         header('Content-Type: application/javascript');
-        return file_get_contents(__DIR__."/../../assets/sw.js");
+
+        return file_get_contents(__DIR__.'/../../assets/sw.js');
     }
 
     public function appJs()
     {
         header('Content-Type: application/javascript');
-        return file_get_contents(__DIR__."/../../assets/app.js");
+
+        return file_get_contents(__DIR__.'/../../assets/app.js');
     }
 }

@@ -2,8 +2,8 @@
 
 use App\Controllers\AssetController;
 use App\Controllers\LoginController;
-use App\Controllers\NoteController;
 use App\Controllers\MainController;
+use App\Controllers\NoteController;
 use PXP\Http\Middleware\InteractiveAuth;
 use PXP\Router\Route;
 

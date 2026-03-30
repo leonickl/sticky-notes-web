@@ -59,6 +59,7 @@ class Note
     public static function find(string $uid): Note
     {
         $dir = config('note.dir');
+
         return Note::fromJSON(file_get_contents("$dir/$uid.json"));
     }
 
@@ -74,7 +75,7 @@ class Note
 
     public function content(): string
     {
-        return str_replace("\n", "<br />", $this->content);
+        return str_replace("\n", '<br />', $this->content);
     }
 
     public function style(): string
