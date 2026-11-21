@@ -19,7 +19,6 @@ return [
         'notification',
         'components',
         'form',
-        'mobile',
         'notes',
     ],
 

@@ -2,12 +2,17 @@
 
 use App\Controllers\MainController;
 use App\Controllers\NoteController;
-use PXP\Auth\Controllers\LoginController;
+use App\Controllers\LoginController;
 use PXP\Auth\Controllers\VerificationController;
 use PXP\Auth\Middleware\InteractiveAuth;
 use PXP\Auth\Middleware\VerifiedEmail;
 use PXP\Http\Controllers\AssetController;
 use PXP\Router\Route;
+use App\Middleware\RememberSession;
+use App\Controllers\PWAController;
+
+Route::global()
+    ->preMiddleware(RememberSession::class);
 
 Route::group(
     Route::get('/')->do(MainController::class, 'index')->name('main'),
