@@ -38,7 +38,7 @@ return [
     ],
 
     'pwa' => [
-        'name' => 'Sticky Notes',
+        'name' => 'Sticky Notes Web',
         'short' => 'Sticky',
         'description' => 'A web client for viewing sticky notes created by com.vixalien.sticky',
     ],
