@@ -4,7 +4,8 @@
     "type": "project",
     "require": {
         "ext-pdo": "*",
-        "leonickl/pxp-core": "^2.2.0"
+        "leonickl/pxp-core": "^5.12",
+        "leonickl/pxp-auth": "^0.4"
     },
     "autoload": {
         "psr-4": {
