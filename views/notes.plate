@@ -1,0 +1,15 @@
+<div class="column-4 items-center">
+    {{ each: $notes as $note }}
+        <div class="note note-{{ $note->style() }} column">
+            <a href="{{ route('note', uid: $note->uuid()) }}">
+                <b>{{ $note->title() }}</b>
+            </a>
+
+            <em>{{ $note->modified() }}</em>
+
+            <a href="{{ route('note', uid: $note->uuid()) }}" class="circle"></a>
+        </div>
+    {{ each; }}
+
+    <a href="{{ route('home') }}" class="btn w-10 text-center">Home</a>
+</div>

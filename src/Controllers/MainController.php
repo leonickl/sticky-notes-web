@@ -8,6 +8,13 @@ class MainController extends Controller
 {
     public function index()
     {
-        return view('main');
+        return auth()
+            ? redirect('notes')
+            : redirect('home');
+    }
+
+    public function home()
+    {
+        return view('home');
     }
 }

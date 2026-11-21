@@ -1,0 +1,15 @@
+<div class="column-4 items-center">
+    <div class="note wrapper note-{{ $note->style() }} column-0">
+        <b class="header">
+            <a href="{{ route('notes') }}" class="close text-center-both">&times;</a>
+        </b>
+
+        <p class="content">
+            {{ % $note->content() }}
+        </p>
+
+        <p class="footer">
+            <em>{{ $note->modified() }}</em>
+        </p>
+    </div>
+</div>

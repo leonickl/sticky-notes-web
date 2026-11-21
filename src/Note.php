@@ -4,7 +4,7 @@ namespace App;
 
 use PXP\Ds\Vector;
 
-class Note
+readonly class Note
 {
     private function __construct(
         private string $uuid,
@@ -48,7 +48,7 @@ class Note
 
     public static function all(): Vector
     {
-        $dir = config('note.dir');
+        $dir = config('note-dir');
 
         return v(...scandir($dir))
             ->filter(fn ($file) => ! str_starts_with($file, '.'))
@@ -58,7 +58,7 @@ class Note
 
     public static function find(string $uid): Note
     {
-        $dir = config('note.dir');
+        $dir = config('note-dir');
 
         return Note::fromJSON(file_get_contents("$dir/$uid.json"));
     }
@@ -70,12 +70,16 @@ class Note
 
     public function title(): string
     {
-        return $this->title ?: '---';
+        if (! $this->title) {
+            return $this->title ?: '---';
+        }
+
+        return mb_trim($this->title, '…');
     }
 
     public function content(): string
     {
-        return str_replace("\n", '<br />', $this->content);
+        return str_replace("\n", '<br />', e($this->content));
     }
 
     public function style(): string

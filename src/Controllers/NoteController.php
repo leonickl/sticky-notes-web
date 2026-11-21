@@ -9,11 +9,15 @@ class NoteController extends Controller
 {
     public function index()
     {
-        return view('notes', ['notes' => Note::all()]);
+        return view('notes', [
+            'notes' => Note::all(),
+        ]);
     }
 
     public function show(string $uid)
     {
-        return view('note', ['note' => Note::find($uid)]);
+        return view('note', [
+            'note' => Note::find($uid),
+        ]);
     }
 }
