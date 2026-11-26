@@ -5,8 +5,8 @@ use PXP\Auth\Models\User;
 
 return [
     'title' => 'Sticky Notes',
-    'app-url' => env('APP_URL', 'http://localhost:8096'),
-    'port' => env('APP_PORT', 8096),
+    'app-url' => env('APP_URL', 'http://localhost:8097'),
+    'port' => env('APP_PORT', 8097),
 
     'note-dir' => env('NOTE_DIR'),
 
